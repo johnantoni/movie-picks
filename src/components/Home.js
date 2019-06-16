@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import axios from 'axios';
+import Articles from './Articles'
 
 class Home extends Component {
   state = {
@@ -30,20 +30,7 @@ class Home extends Component {
       <div>
         <h1>Home</h1>
 
-        { results.map((item, index) => {
-          return (
-            <article key={index}>
-              <header>
-                <h3>{item.display_title}</h3>
-              </header>
-              <section className="headline">{item.headline}</section>
-              <section className="summary">{item.summary_short}</section>
-              <footer>
-                <Link to={item.link.url} target="_blank">{item.link.suggested_link_text}</Link> 
-              </footer>
-            </article>
-          )
-        })}
+        <Articles list={results}/>
 
         { error &&
           <p>Sorry, an error has occured. { this.state.error }</p>
