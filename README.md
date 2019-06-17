@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c0a594ca-b598-48cd-a1ab-63c750d08882/deploy-status)](https://app.netlify.com/sites/movie-picks/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
