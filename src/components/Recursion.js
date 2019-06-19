@@ -13,6 +13,9 @@ class Recursion extends Component {
 
   async componentDidMount() {
     this.countTo(5)
+    this.setState({
+      grouped: _.groupBy(people, 'state')
+    });
   }
 
   countTo = (num = 10) => {
@@ -28,9 +31,7 @@ class Recursion extends Component {
   }
 
   render() {
-    let { people } = this.state // destructuring
-
-    let grouped = _.groupBy(people, 'state');
+    let { people, grouped } = this.state // destructuring
 
     console.log(people)
     console.log(grouped)
