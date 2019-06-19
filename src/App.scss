@@ -35,7 +35,7 @@ article {
   }
 }
 
-@media (max-width: 600px) { 
+@media (max-width: 600px) and (orientation: landscape) { 
   article {
     width: calc((100%) - 40px);
   }
