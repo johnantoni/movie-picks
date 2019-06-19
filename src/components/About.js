@@ -6,6 +6,13 @@ class About extends Component {
 
   }
 
+  onKeyPressed = (e) => {
+    console.log('KeyCode: ', e.keyCode)
+    if(e.keyCode === 13) { // The Enter/Return key
+      console.log("enter pressed")
+    }
+  }
+
   render() {
     var Parent = function(a) {
       // Setting type instance level properties
@@ -41,6 +48,12 @@ class About extends Component {
     return (
       <div>
         <h1>About Movie Picks</h1>
+
+        <input onKeyDown={this.onKeyPressed} size="40" placeholder="Click here and press Enter"></input>
+
+        <div data-message="This is from the first button" tabIndex="0">Click me!</div>
+        <div data-message="This is from the second button" tabIndex="1">Click me too!</div>
+        <div data-message="This is from the third button" tabIndex="2">And me!</div>
       </div>      
     )
   }
