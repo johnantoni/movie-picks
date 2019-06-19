@@ -3,15 +3,15 @@ import Link from "./Link";
 
 const Articles = ({ list }) => (
   <div id="articles">
-  { list.map(item => (
-      <article key={item}>
+  { list.map((item, key) => (
+      <article key={key}>
         <header>
           <h3>{item.display_title}</h3>
         </header>
         <section className="headline">{item.headline}</section>
         <section className="summary">{item.summary_short}</section>
         <footer>
-          <Link to={item.link.url} isExternal="true">{item.link.suggested_link_text}</Link> 
+          <Link to={item.link.url} isexternal="true">{item.link.suggested_link_text}</Link> 
         </footer>
       </article>
   ))}
