@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Link from "./Link";
 
 const Articles = ({ list }) => (
-  <div>
+  <div id="articles">
   { list.map(item => (
       <article key={item}>
         <header>

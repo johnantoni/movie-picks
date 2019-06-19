@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link as ReactLink } from 'react-router-dom';
 
-export default class Link extends React.Component {
+export default class Link extends Component {
   
   parseTo(to) {
 

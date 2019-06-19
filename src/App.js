@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 
-import './App.css';
+import './App.scss';
 
 function Header() {
   return (
-    <ul>
+    <ul className="menu">
       <li>
         <Link to="/">Home</Link>
       </li>
