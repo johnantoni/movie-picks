@@ -35,3 +35,14 @@ article {
   }
 }
 
+@media (max-width: 600px) { 
+  article {
+    width: calc((100%) - 40px);
+  }
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    /* Retina-specific stuff here */
+}
