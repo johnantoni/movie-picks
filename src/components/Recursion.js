@@ -14,8 +14,17 @@ class Recursion extends Component {
   async componentDidMount() {
     this.countTo(5)
     this.setState({
-      grouped: _.groupBy(people, 'state')
+      grouped: _.groupBy(this.state.people, 'state')
     });
+
+    console.log(this.groupBy(this.state.people))
+  }
+
+  groupBy = (data) => {
+    return data.reduce(function(row, i) {
+      (row[i["state"]] = row[i["state"]] || []).push(i);
+      return row;
+    }, {});
   }
 
   countTo = (num = 10) => {
