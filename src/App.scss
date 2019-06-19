@@ -35,11 +35,21 @@ article {
   }
 }
 
+// inverting the meaning
+@media not (max-width: 1000px) and (orientation: landscape) { 
+  article {
+    width: calc((100% / 2) - 40px);
+  }
+}
+
 @media (max-width: 600px) and (orientation: landscape) { 
   article {
     width: calc((100%) - 40px);
   }
 }
+
+// level 4 query
+// @media (width <= 30em) { .. }
 
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
